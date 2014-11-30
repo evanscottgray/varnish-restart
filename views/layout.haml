@@ -1,0 +1,20 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %title
+      = @title if defined?(@title)
+    %link{:href => "/css/bootstrap.css", :rel => "stylesheet"}/
+    %link{:href => "/css/stickyfooter.css", :rel => "stylesheet"}/
+    %link{href: "/images/favicon.ico", rel: "icon"}/
+  %body
+    #wrap
+      .navbar.navbar-default.navbar-static-top
+        .navbar-inner
+          .navbar-brand{:href => "/"}
+            %img{src: "/images/elevatelogo.png", class: "", style: "max-width: 15%;"}
+      =yield
+    #footer
+      .container
+        %p.text-muted.credit
+          sbsrestart, lovingly crafted by
+          %a{:href => "mailto:hello+github@evanscottgray.com"} evan.
